@@ -1,0 +1,178 @@
+/* Corporate Theme - Корпоративна тема */
+/* Палітра базується на #4D648D (RGB 77, 100, 141) */
+
+:root {
+    /* Typography */
+    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-size-base: 16px;
+
+    /* Border Radius - Conservative, standard */
+    --radius: 0.375rem;
+    /* 6px */
+    --radius-sm: 0.25rem;
+    /* 4px */
+    --radius-md: 0.375rem;
+    /* 6px */
+    --radius-lg: 0.5rem;
+    /* 8px */
+    --radius-xl: 0.75rem;
+    /* 12px */
+
+    /* Shadows - Professional with brand color tint */
+    --shadow-sm: 0 1px 2px rgba(77, 100, 141, 0.08);
+    --shadow-md: 0 4px 6px rgba(77, 100, 141, 0.12);
+    --shadow-lg: 0 10px 15px rgba(77, 100, 141, 0.15);
+    --shadow-xl: 0 20px 25px rgba(77, 100, 141, 0.18);
+
+    /* Transitions */
+    --transition-speed: 200ms;
+    --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Нова кольорова палітра */
+    /* #2C3E50 - найтемніший */
+    /* #4D648D - основний синій (RGB 77, 100, 141) */
+    /* #7B8FA8 - сіро-синій */
+    /* #A4B4CC - світло-сіро-синій */
+    /* #C8D1E0 - світлий */
+    /* #E8EDF5 - найсвітліший */
+
+    /* Основні кольори фону та тексту */
+    --background: #f5f7fa;
+    /* Дуже світлий фон сайту */
+    --foreground: #2c3e50;
+    /* Найтемніший - основний текст */
+
+    /* Картки */
+    --card: #ffffff;
+    /* Білі картки */
+    --card-foreground: #2c3e50;
+    /* Темний текст на картках */
+
+    /* Спливаючі вікна */
+    --popover: #ffffff;
+    --popover-foreground: #2c3e50;
+
+    /* Основний акцентний колір */
+    --primary: #4d648d;
+    /* Основний синій для кнопок */
+    --primary-foreground: #ffffff;
+
+    /* Вторинний колір */
+    --secondary: #a4b4cc;
+    /* Світло-сіро-синій */
+    --secondary-foreground: #2c3e50;
+
+    /* Приглушені кольори */
+    --muted: #e8edf5;
+    /* Найсвітліший для фону */
+    --muted-foreground: #7b8fa8;
+    /* Сіро-синій для тексту */
+
+    /* Акцент */
+    --accent: #7b8fa8;
+    /* Сіро-синій */
+    --accent-foreground: #ffffff;
+
+    /* Деструктивні дії */
+    --destructive: #e74c3c;
+    --destructive-foreground: #ffffff;
+
+    /* Бордери та інпути */
+    --border: #c8d1e0;
+    /* Світлий для бордерів */
+    --input: #c8d1e0;
+    /* Білі інпути -> Світлий для бордерів */
+    --ring: #4d648d;
+    /* Основний синій для focus */
+
+    /* Графіки - палітра */
+    --chart-1: #4d648d;
+    /* Основний синій */
+    --chart-2: #7b8fa8;
+    /* Сіро-синій */
+    --chart-3: #a4b4cc;
+    /* Світло-сіро-синій */
+    --chart-4: #c8d1e0;
+    /* Світлий */
+    --chart-5: #2c3e50;
+    /* Темний */
+
+    /* Сайдбар - темний для контрасту */
+    --sidebar-background: #2c3e50;
+    /* Найтемніший */
+    --sidebar-foreground: #e8edf5;
+    /* Світлий текст */
+    --sidebar-primary: #7b8fa8;
+    /* Сіро-синій для акцентів */
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #4d648d;
+    /* Основний синій для hover */
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #4d648d;
+    --sidebar-ring: #7b8fa8;
+    --sidebar: #2c3e50;
+
+    --input-background: #ffffff;
+}
+
+/* Override input background for corporate theme */
+[data-slot='input'] {
+    background-color: var(--input-background);
+}
+
+/* Темний режим для корпоративної теми */
+.dark {
+    --background: #2c3e50;
+    /* Найтемніший фон */
+    --foreground: #e8edf5;
+    /* Світлий текст */
+
+    --card: #4d648d;
+    /* Основний синій для карток */
+    --card-foreground: #e8edf5;
+
+    --popover: #4d648d;
+    --popover-foreground: #e8edf5;
+
+    --primary: #7b8fa8;
+    /* Сіро-синій для кнопок */
+    --primary-foreground: #ffffff;
+
+    --secondary: #4d648d;
+    /* Основний синій */
+    --secondary-foreground: #e8edf5;
+
+    --muted: #4d648d;
+    --muted-foreground: #a4b4cc;
+
+    --accent: #a4b4cc;
+    /* Світло-сіро-синій акцент */
+    --accent-foreground: #2c3e50;
+
+    --destructive: #e74c3c;
+    --destructive-foreground: #ffffff;
+
+    --border: #4d648d;
+    --input: #4d648d;
+    --ring: #7b8fa8;
+
+    --chart-1: #e8edf5;
+    /* Інверсія для темного режиму */
+    --chart-2: #a4b4cc;
+    --chart-3: #7b8fa8;
+    --chart-4: #4d648d;
+    --chart-5: #2c3e50;
+
+    --sidebar-background: #1a252f;
+    /* Ще темніший */
+    --sidebar-foreground: #e8edf5;
+    --sidebar-primary: #7b8fa8;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #4d648d;
+    --sidebar-accent-foreground: #e8edf5;
+    --sidebar-border: #4d648d;
+    --sidebar-ring: #7b8fa8;
+    --sidebar: #1a252f;
+
+    --input-background: rgba(77, 100, 141, 0.3);
+}

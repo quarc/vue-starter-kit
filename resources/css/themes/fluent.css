@@ -1,0 +1,249 @@
+/* Fluent Design Theme - Microsoft's Fluent Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Typography */
+    --font-sans:
+        'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-size-base: 14px;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border Radius - No rounding as requested */
+    --radius: 0;
+    --radius-sm: 0;
+    --radius-md: 0;
+    --radius-lg: 0;
+    --radius-xl: 0;
+
+    /* Shadows - Fluent's depth system (subtle) */
+    --shadow-sm:
+        0 1.6px 3.6px rgba(0, 0, 0, 0.13), 0 0.3px 0.9px rgba(0, 0, 0, 0.11);
+    --shadow-md:
+        0 3.2px 7.2px rgba(0, 0, 0, 0.13), 0 0.6px 1.8px rgba(0, 0, 0, 0.11);
+    --shadow-lg:
+        0 6.4px 14.4px rgba(0, 0, 0, 0.13), 0 1.2px 3.6px rgba(0, 0, 0, 0.11);
+    --shadow-xl:
+        0 25.6px 57.6px rgba(0, 0, 0, 0.22), 0 4.8px 14.4px rgba(0, 0, 0, 0.18);
+
+    /* Transitions - Fluent motion */
+    --transition-speed: 200ms;
+    --transition-easing: cubic-bezier(0.1, 0.9, 0.2, 1);
+
+    /* Acrylic effect */
+    --acrylic-blur: 30px;
+    --acrylic-opacity: 0.7;
+
+    /* Fluent Design Color System */
+    /* Background & Surface */
+    --background: #f3f3f3;
+    /* Light grey background */
+    --foreground: #000000;
+    /* Black text */
+
+    /* Cards & Surfaces */
+    --card: #ffffff;
+    /* White cards */
+    --card-foreground: #000000;
+
+    --popover: #ffffff;
+    --popover-foreground: #000000;
+
+    /* Primary - Windows Blue */
+    --primary: #0078d4;
+    /* System accent color */
+    --primary-foreground: #ffffff;
+
+    /* Secondary - Grey tones */
+    --secondary: #e1e1e1;
+    /* Light grey for secondary elements */
+    --secondary-foreground: #000000;
+
+    /* Muted - Disabled states */
+    --muted: #f3f3f3;
+    /* Background grey */
+    --muted-foreground: #605e5c;
+    /* Disabled text grey */
+
+    /* Accent - Same as primary */
+    --accent: #0078d4;
+    /* Windows Blue */
+    --accent-foreground: #ffffff;
+
+    /* Destructive - Red */
+    --destructive: #d13438;
+    /* Error red */
+    --destructive-foreground: #ffffff;
+
+    /* Borders & Inputs */
+    --border: #8a8886;
+    /* Neutral Dark - Default border */
+    --input: #ffffff;
+    /* White input background */
+    --ring: #0078d4;
+    /* Focus ring - Windows Blue (2px) */
+
+    /* Charts - Fluent colors */
+    --chart-1: #0078d4;
+    /* Blue */
+    --chart-2: #107c10;
+    /* Green */
+    --chart-3: #ffb900;
+    /* Yellow */
+    --chart-4: #d13438;
+    /* Red */
+    --chart-5: #8764b8;
+    /* Purple */
+
+    /* Sidebar - Light with acrylic */
+    --sidebar-background: rgba(243, 243, 243, 0.7);
+    /* Light grey with transparency */
+    --sidebar-foreground: #000000;
+    --sidebar-primary: #0078d4;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e1e1e1;
+    /* Hover state */
+    --sidebar-accent-foreground: #000000;
+    --sidebar-border: #8a8886;
+    --sidebar-ring: #0078d4;
+    --sidebar: rgba(243, 243, 243, 0.7);
+}
+
+/* Dark mode - Fluent Dark Theme */
+.dark {
+    /* Background & Surface */
+    --background: #1f1f1f;
+    /* Dark grey background */
+    --foreground: #ffffff;
+    /* White text */
+
+    /* Cards & Surfaces */
+    --card: #2d2d2d;
+    /* Dark grey cards */
+    --card-foreground: #ffffff;
+
+    --popover: #2d2d2d;
+    --popover-foreground: #ffffff;
+
+    /* Primary - Lighter blue for dark mode */
+    --primary: #60cdff;
+    /* Light blue */
+    --primary-foreground: #000000;
+
+    /* Secondary */
+    --secondary: #3b3b3b;
+    /* Dark grey */
+    --secondary-foreground: #ffffff;
+
+    /* Muted - Disabled states */
+    --muted: #2d2d2d;
+    --muted-foreground: #8a8886;
+    /* Disabled text */
+
+    /* Accent */
+    --accent: #60cdff;
+    /* Light blue */
+    --accent-foreground: #000000;
+
+    /* Destructive */
+    --destructive: #f1707b;
+    /* Light red */
+    --destructive-foreground: #000000;
+
+    /* Borders & Inputs */
+    --border: #8a8886;
+    /* Lighter grey for dark mode borders */
+    --input: #2d2d2d;
+    --ring: #60cdff;
+
+    /* Charts */
+    --chart-1: #60cdff;
+    /* Light blue */
+    --chart-2: #6ccb5f;
+    /* Light green */
+    --chart-3: #ffb900;
+    /* Yellow */
+    --chart-4: #f1707b;
+    /* Light red */
+    --chart-5: #b4a0ff;
+    /* Light purple */
+
+    /* Sidebar - Dark with acrylic */
+    --sidebar-background: rgba(45, 45, 45, 0.7);
+    --sidebar-foreground: #ffffff;
+    --sidebar-primary: #60cdff;
+    --sidebar-primary-foreground: #000000;
+    --sidebar-accent: #3b3b3b;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #3b3b3b;
+    --sidebar-ring: #60cdff;
+    --sidebar: rgba(45, 45, 45, 0.7);
+}
+
+/* Fluent Design specific styles */
+body {
+    font-family: var(--font-sans);
+}
+
+/* Acrylic effect for sidebar and cards */
+.sidebar,
+.card-acrylic {
+    backdrop-filter: blur(var(--acrylic-blur));
+    -webkit-backdrop-filter: blur(var(--acrylic-blur));
+}
+
+/* Reveal effect on hover */
+.reveal-effect {
+    position: relative;
+    transition: all var(--transition-speed) var(--transition-easing);
+}
+
+.reveal-effect:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Fluent Input Overrides to match specific states */
+/* Ці стилі забезпечують поведінку інпутів як на зображенні */
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+    border-color: var(--border);
+    /* Default grey */
+    border-width: 2px;
+    /* Thicker border as requested */
+    border-radius: var(--radius);
+    transition: border-color var(--transition-speed) var(--transition-easing);
+}
+
+/* Hover state - Black border */
+input:not([type='checkbox']):not([type='radio']):hover:not(:disabled):not(
+        :focus
+    ),
+textarea:hover:not(:disabled):not(:focus),
+select:hover:not(:disabled):not(:focus) {
+    border-color: #000000 !important;
+}
+
+/* Focus state - Blue border (thick or ring) */
+input:not([type='checkbox']):not([type='radio']):focus,
+textarea:focus,
+select:focus {
+    border-color: var(--ring) !important;
+    box-shadow: 0 0 0 1px var(--ring) !important;
+    /* Make it look like 2px border */
+    outline: none;
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: var(--muted);
+    border-color: var(--border);
+    opacity: 0.6;
+    cursor: not-allowed;
+}

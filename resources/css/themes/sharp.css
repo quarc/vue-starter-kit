@@ -1,0 +1,225 @@
+/* Sharp Theme - Minimalist design with no rounded corners */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Typography */
+    --font-sans: 'IBM Plex Sans', ui-monospace, monospace, sans-serif;
+    --font-size-base: 15px;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border Radius - Sharp corners (no rounding) */
+    --radius: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+    --radius-xl: 0px;
+
+    /* Shadows - Minimal, sharp shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    /* Transitions - Snappy and quick */
+    --transition-speed: 150ms;
+    --transition-easing: cubic-bezier(0.4, 0, 0.6, 1);
+
+    /* Grid system */
+    --grid-unit: 8px;
+
+    /* Colors - High contrast monochromatic */
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(0 0% 0%);
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(0 0% 0%);
+
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(0 0% 0%);
+
+    /* Primary - Pure Black */
+    --primary: hsl(0 0% 0%);
+    --primary-foreground: hsl(0 0% 100%);
+
+    --secondary: hsl(0 0% 96%);
+    --secondary-foreground: hsl(0 0% 0%);
+
+    --muted: hsl(0 0% 96%);
+    --muted-foreground: hsl(0 0% 40%);
+
+    --accent: hsl(0 0% 10%);
+    --accent-foreground: hsl(0 0% 100%);
+
+    --destructive: hsl(0 0% 20%);
+    --destructive-foreground: hsl(0 0% 100%);
+
+    --border: hsl(0 0% 0%);
+    --input: hsl(0 0% 100%);
+    --ring: hsl(0 0% 0%);
+
+    /* Charts - Grayscale palette */
+    --chart-1: hsl(0 0% 0%);
+    --chart-2: hsl(0 0% 25%);
+    --chart-3: hsl(0 0% 50%);
+    --chart-4: hsl(0 0% 70%);
+    --chart-5: hsl(0 0% 85%);
+
+    /* Sidebar */
+    --sidebar-background: hsl(0 0% 98%);
+    --sidebar-foreground: hsl(0 0% 0%);
+    --sidebar-primary: hsl(0 0% 0%);
+    --sidebar-primary-foreground: hsl(0 0% 100%);
+    --sidebar-accent: hsl(0 0% 96%);
+    --sidebar-accent-foreground: hsl(0 0% 0%);
+    --sidebar-border: hsl(0 0% 0%);
+    --sidebar-ring: hsl(0 0% 0%);
+    --sidebar: hsl(0 0% 98%);
+}
+
+/* Dark mode - Sharp Dark Theme with color inversion */
+.dark {
+    --background: hsl(0 0% 0%);
+    --foreground: hsl(0 0% 100%);
+
+    --card: hsl(0 0% 5%);
+    --card-foreground: hsl(0 0% 100%);
+
+    --popover: hsl(0 0% 5%);
+    --popover-foreground: hsl(0 0% 100%);
+
+    --primary: hsl(0 0% 100%);
+    --primary-foreground: hsl(0 0% 0%);
+
+    --secondary: hsl(0 0% 10%);
+    --secondary-foreground: hsl(0 0% 100%);
+
+    --muted: hsl(0 0% 10%);
+    --muted-foreground: hsl(0 0% 60%);
+
+    --accent: hsl(0 0% 90%);
+    --accent-foreground: hsl(0 0% 0%);
+
+    --destructive: hsl(0 0% 80%);
+    --destructive-foreground: hsl(0 0% 0%);
+
+    --border: hsl(0 0% 100%);
+    --input: hsl(0 0% 5%);
+    --ring: hsl(0 0% 100%);
+
+    --chart-1: hsl(0 0% 100%);
+    --chart-2: hsl(0 0% 75%);
+    --chart-3: hsl(0 0% 50%);
+    --chart-4: hsl(0 0% 30%);
+    --chart-5: hsl(0 0% 15%);
+
+    --sidebar-background: hsl(0 0% 5%);
+    --sidebar-foreground: hsl(0 0% 100%);
+    --sidebar-primary: hsl(0 0% 100%);
+    --sidebar-primary-foreground: hsl(0 0% 0%);
+    --sidebar-accent: hsl(0 0% 10%);
+    --sidebar-accent-foreground: hsl(0 0% 100%);
+    --sidebar-border: hsl(0 0% 100%);
+    --sidebar-ring: hsl(0 0% 100%);
+    --sidebar: hsl(0 0% 5%);
+}
+
+/* Sharp theme specific styles */
+body {
+    font-family: var(--font-sans);
+}
+
+/* Remove all border radius */
+*,
+*::before,
+*::after {
+    border-radius: 0 !important;
+}
+
+/* Sharp, thick borders */
+.border {
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Grid-based spacing */
+.spacing-1 {
+    margin: calc(var(--grid-unit) * 1);
+}
+
+.spacing-2 {
+    margin: calc(var(--grid-unit) * 2);
+}
+
+.spacing-3 {
+    margin: calc(var(--grid-unit) * 3);
+}
+
+.spacing-4 {
+    margin: calc(var(--grid-unit) * 4);
+}
+
+/* Sharp hover effects - color inversion */
+button:hover,
+.button:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+    transition: none;
+}
+
+/* Hard shadows without blur */
+.shadow {
+    box-shadow: 4px 4px 0 var(--foreground);
+}
+
+/* Sharp Input Borders - Enhanced visibility */
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+    border: 2px solid hsl(0 0% 0%) !important;
+    /* Thick black border */
+    background-color: var(--input) !important;
+    transition: border-color 0.15s ease-in-out !important;
+}
+
+input:not([type='checkbox']):not([type='radio']):hover,
+textarea:hover,
+select:hover {
+    border-color: hsl(0 0% 20%) !important;
+    /* Slightly lighter on hover */
+}
+
+input:not([type='checkbox']):not([type='radio']):focus,
+textarea:focus,
+select:focus {
+    border-color: hsl(0 0% 0%) !important;
+    /* Pure black on focus */
+    outline: 2px solid hsl(0 0% 0%) !important;
+    outline-offset: 2px !important;
+}
+
+/* Dark mode input borders */
+.dark input:not([type='checkbox']):not([type='radio']),
+.dark textarea,
+.dark select {
+    border: 2px solid hsl(0 0% 100%) !important;
+    /* Thick white border */
+}
+
+.dark input:not([type='checkbox']):not([type='radio']):hover,
+.dark textarea:hover,
+.dark select:hover {
+    border-color: hsl(0 0% 80%) !important;
+}
+
+.dark input:not([type='checkbox']):not([type='radio']):focus,
+.dark textarea:focus,
+.dark select:focus {
+    border-color: hsl(0 0% 100%) !important;
+    outline: 2px solid hsl(0 0% 100%) !important;
+    outline-offset: 2px !important;
+}
