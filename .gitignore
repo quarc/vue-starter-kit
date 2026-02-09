@@ -27,3 +27,8 @@ yarn-error.log
 /.vscode
 /.zed
 translation_extraction_log.json
+/.gemini
+/.agents
+/.codex
+/.cursor
+/.claude
