@@ -22,10 +22,15 @@ const loadMessages = () => {
             messages[locale] = (modules[path] as any).default;
         }
     }
-    return messages;
 };
 
 const messages = loadMessages();
+
+// Auto-discover and register plugins
+const plugins = import.meta.glob('./components/modules/**/index.ts', {
+    eager: true,
+});
+console.log('Discovered plugins:', Object.keys(plugins));
 
 createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),

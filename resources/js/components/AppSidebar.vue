@@ -3,6 +3,7 @@ import AppLogoIcon from '@/components/AppLogoIcon.vue';
 import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
 import NavUser from '@/components/NavUser.vue';
+import PluginSlot from '@/components/PluginSlot.vue';
 import {
     Sidebar,
     SidebarContent,
@@ -72,6 +73,7 @@ useSidebar();
                     </SidebarMenuButton>
                 </SidebarMenuItem>
             </SidebarMenu>
+            <PluginSlot name="sidebar.header.dropdown" />
         </SidebarHeader>
 
         <SidebarContent>
