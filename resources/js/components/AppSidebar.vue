@@ -85,12 +85,12 @@ useSidebar();
                 :items="[
                     {
                         title: $t('Repository'),
-                        href: 'https://github.com/laravel/vue-starter-kit',
+                        href: 'https://github.com/quarc/vue-starter-kit',
                         icon: Folder,
                     },
                     {
                         title: $t('Documentation'),
-                        href: 'https://laravel.com/docs/starter-kits#vue',
+                        href: 'https://github.com/quarc/vue-starter-kit/blob/main/docs/quarc-overview.md',
                         icon: BookOpen,
                     },
                 ]"

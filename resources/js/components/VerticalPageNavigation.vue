@@ -19,7 +19,7 @@ const currentPath = typeof window !== undefined ? window.location.pathname : '';
             variant="ghost"
             :class="[
                 'w-full justify-start',
-                { 'bg-muted': urlIsActive(item.href, currentPath) },
+                { 'bg-muted': item.isActive ?? urlIsActive(item.href, currentPath) },
             ]"
             as-child
         >
